@@ -1,6 +1,6 @@
 package com.company;
 
-public class BS {
+public class BinarySearch {
     int k = 0;
     public static int bs(int arr[], int elementToSearch) {
 
