@@ -15,7 +15,6 @@ public class InsertionSort implements Sort {
 // Если вытащили значение меньшее — передвигаем больший элемент дальше
                 if (value < arr[i]) {
                     arr[i + 1] = arr[i];
-                    k++;
                 } else {
 // Если вытащенный элемент больше — останавливаемся
                     break;

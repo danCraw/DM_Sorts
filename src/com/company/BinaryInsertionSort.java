@@ -3,21 +3,25 @@ package com.company;
 import java.util.Arrays;
 
 public class BinaryInsertionSort implements Sort {
+    int c = 0;
+    private static int countWhile = 0;
+
     @Override
-    public int[] sort (int[] arr) {
-        int k = 0;
-        for (int left = 0; left < arr.length; left++) {
-            int value = arr[left];
+    public int[] sort(int[] arr) {
+        for (int k = 1; k < arr.length; k++) {
+            int newElement = arr[k];
             int index;
-            k += BinarySearch.binarySearch(arr, value);
-            index = Arrays.binarySearch(arr, 0, left, value);
+//            c+= BS.bs(arr, newElement);
+            index = Arrays.binarySearch(arr, 0, k, newElement);
             if (index < 0) {
                 index = -(index) - 1;
+//                c++;
             }
-            System.arraycopy(arr, index, arr, index + 1, left - index);
-            arr[index] = value;
+            c++;
+            System.arraycopy(arr, index, arr, index + 1, k - index);
+            arr[index] = newElement;
         }
-        System.out.println(k);
+        System.out.println(c);
         return arr;
     }
 }

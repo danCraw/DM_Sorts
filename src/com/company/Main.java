@@ -8,7 +8,7 @@ public class Main {
         InsertionSort insertionSort = new InsertionSort();
         BinaryInsertionSort binaryInsertionSort = new BinaryInsertionSort();
         int arrSize = 100;
-        int[] arr = worstCase(arrSize);
+        int[] arr = middleCase(arrSize);
         System.out.println("Исходный массив: ");
         System.out.println(Arrays.toString(arr));
         System.out.println("Отсортированный массив: ");

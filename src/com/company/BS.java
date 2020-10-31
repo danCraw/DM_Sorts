@@ -1,8 +1,8 @@
 package com.company;
 
-public class BinarySearch {
+public class BS {
     int k = 0;
-    public static int binarySearch(int arr[], int elementToSearch) {
+    public static int bs(int arr[], int elementToSearch) {
 
         int k = 0;
         int firstIndex = 0;
