@@ -5,7 +5,7 @@ public class InsertionSort implements Sort {
     @Override
     public int[] sort(int[] arr) {
         int k = 0;
-        for (int left = 0; left < arr.length; left++) {
+        for (int left = 1; left < arr.length; left++) {
 // Вытаскиваем значение элемента
             int value = arr[left];
 // Перемещаемся по элементам, которые перед вытащенным элементом

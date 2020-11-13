@@ -36,6 +36,7 @@ public class BinaryInsertionSort implements Sort {
         if (countWhile <= 0){
             count = arr.length - 1;
         }
+        System.out.println(count);
         return arr;
     }
 }
