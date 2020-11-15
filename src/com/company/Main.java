@@ -10,7 +10,7 @@ public class Main {
         BubbleSort bubbleSort = new BubbleSort();
         ShellSort shellSort = new ShellSort();
         int arrSize = 10;
-        int[] arr = bestCase(arrSize);
+        int[] arr = ordered(arrSize);
 
         System.out.println("Исходный массив: ");
         System.out.println(Arrays.toString(arr));
@@ -21,7 +21,7 @@ public class Main {
         System.out.println(Arrays.toString(shellSort.sort(arr)));
     }
 
-    private static int[] worstCase(int arrSize) {
+    private static int[] reverseOrdered(int arrSize) {
         int[] arr = new int[arrSize];
         for (int i = 0; i < arr.length; i++) {
             arr[i] = arr.length - i;
@@ -29,7 +29,7 @@ public class Main {
         return arr;
     }
 
-    private static int[] bestCase(int arrSize) {
+    private static int[] ordered(int arrSize) {
         int[] arr = new int[arrSize];
         for (int i = 0; i < arr.length; i++) {
             arr[i] = i;
@@ -37,7 +37,7 @@ public class Main {
         return arr;
     }
 
-    private static int[] middleCase(int arrSize) {
+    private static int[] random(int arrSize) {
         int[] arr = new int[arrSize];
         for (int i = 0; i < arr.length; i++) {
             arr[i] = Random.interval(0, 100);
