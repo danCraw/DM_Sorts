@@ -12,7 +12,6 @@ public class BinarySearch {
             k++;
             int middleIndex = (firstIndex + lastIndex) / 2;
             if (arr[middleIndex] == elementToSearch) {
-//                System.out.println("Количество сравнений " + k);
                 return k;
             }
             else {

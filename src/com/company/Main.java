@@ -9,8 +9,10 @@ public class Main {
         BinaryInsertionSort binaryInsertionSort = new BinaryInsertionSort();
         BubbleSort bubbleSort = new BubbleSort();
         ShellSort shellSort = new ShellSort();
+        QuickSort quickSort = new QuickSort();
+        MergeSort mergeSort = new MergeSort();
         int arrSize = 10;
-        int[] arr = ordered(arrSize);
+        int[] arr = random(arrSize);
 
         System.out.println("Исходный массив: ");
         System.out.println(Arrays.toString(arr));
@@ -18,7 +20,9 @@ public class Main {
 //        System.out.println(Arrays.toString(insertionSort.sort(arr)));
 //        System.out.println(Arrays.toString(binaryInsertionSort.sort(arr)));
 //        System.out.println(Arrays.toString(bubbleSort.sort(arr)));
-        System.out.println(Arrays.toString(shellSort.sort(arr)));
+//       System.out.println(Arrays.toString(shellSort.sort(arr)));
+        System.out.println(Arrays.toString(QuickSort.sort(arr, 0, arrSize - 1)));
+//        System.out.println(Arrays.toString(MergeSort.sort(arr)));
     }
 
     private static int[] reverseOrdered(int arrSize) {
