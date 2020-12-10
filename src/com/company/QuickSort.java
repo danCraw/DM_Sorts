@@ -1,57 +1,57 @@
 package com.company;
 
+import java.util.Arrays;
+
 public class QuickSort {
     static int k = 0;
-    public static int[] sort(int[] arr, int low, int high) {
-        if (arr.length == 0) {
-            System.out.println(k);
-            return arr;
-        }//завершить выполнение если длина массива равна 0
+    public int[] sort(int[] arr, int from, int to) {
+        if (from < to) {
 
-        if (low >= high) {
-            System.out.println(k);
-            return arr;
-        }//завершить выполнение если уже нечего делить
+            int divideIndex = partition(arr, from, to);
 
-        // выбрать опорный элемент
-        int middle = low + (high - low) / 2;
-        int opora = arr[middle];
+            sort(arr, from, divideIndex - 1);
 
-        // разделить на подмассивы, который больше и меньше опорного элемента
-        int i = low, j = high;
-        while (i <= j) {
-            k++;
-            while (arr[i] < opora) {
-                k++;
-                i++;
-            }
+            sort(arr, divideIndex, to);
 
-            while (arr[j] > opora) {
-                j--;
-            }
-
-            if (i <= j) {//меняем местами
-                k++;
-                int temp = arr[i];
-                arr[i] = arr[j];
-                arr[j] = temp;
-                i++;
-                j--;
-            }
-        }
-
-        // вызов рекурсии для сортировки левой и правой части
-        if (low < j) {
-            k++;
-            sort(arr, low, j);
-        }
-
-        if (high > i) {
-            k++;
-            sort(arr, i, high);
         }
         System.out.println(k);
         return arr;
+    }
+
+    private static int partition(int[] arr, int from, int to) {
+
+        int rightIndex = to;
+        int leftIndex = from;
+
+        int pivot = arr[from + (to - from) / 2];
+
+        while (leftIndex <= rightIndex) {
+        k++;
+            while (arr[leftIndex] < pivot) {
+                k++;
+                leftIndex++;
+            }
+        k++;
+            while (arr[rightIndex] > pivot) {
+                k++;
+                rightIndex--;
+            }
+        k++;
+            if (leftIndex <= rightIndex) {
+                k++;
+                swap(arr, rightIndex, leftIndex);
+                leftIndex++;
+                rightIndex--;
+            }
+        }
+        return leftIndex;
+    }
+
+    private static void swap(int[] array, int index1, int index2) {
+        k++;
+        int tmp  = array[index1];
+        array[index1] = array[index2];
+        array[index2] = tmp;
     }
 
 }

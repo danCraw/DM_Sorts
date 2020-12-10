@@ -11,8 +11,8 @@ public class Main {
         ShellSort shellSort = new ShellSort();
         QuickSort quickSort = new QuickSort();
         MergeSort mergeSort = new MergeSort();
-        int arrSize = 10;
-        int[] arr = random(arrSize);
+        int arrSize = 15;
+        int[] arr = ordered(arrSize);
 
         System.out.println("Исходный массив: ");
         System.out.println(Arrays.toString(arr));
@@ -21,8 +21,8 @@ public class Main {
 //        System.out.println(Arrays.toString(binaryInsertionSort.sort(arr)));
 //        System.out.println(Arrays.toString(bubbleSort.sort(arr)));
 //       System.out.println(Arrays.toString(shellSort.sort(arr)));
-        System.out.println(Arrays.toString(QuickSort.sort(arr, 0, arrSize - 1)));
-//        System.out.println(Arrays.toString(MergeSort.sort(arr)));
+        System.out.println(Arrays.toString(quickSort.sort(arr, arrSize / 2, arr.length - 1)));
+//        System.out.println(Arrays.toString(mergeSort.sort(arr)));
     }
 
     private static int[] reverseOrdered(int arrSize) {
