@@ -23,7 +23,7 @@ public class QuickSort {
         int rightIndex = to;
         int leftIndex = from;
 
-        int pivot = arr[from + (to - from) / 2];
+        int pivot = arr[from];
 
         while (leftIndex <= rightIndex) {
         k++;

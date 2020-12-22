@@ -12,7 +12,7 @@ public class Main {
         QuickSort quickSort = new QuickSort();
         MergeSort mergeSort = new MergeSort();
         int arrSize = 15;
-        int[] arr = ordered(arrSize);
+        int[] arr = reverseOrdered(arrSize);
 
         System.out.println("Исходный массив: ");
         System.out.println(Arrays.toString(arr));
@@ -21,7 +21,7 @@ public class Main {
 //        System.out.println(Arrays.toString(binaryInsertionSort.sort(arr)));
 //        System.out.println(Arrays.toString(bubbleSort.sort(arr)));
 //       System.out.println(Arrays.toString(shellSort.sort(arr)));
-        System.out.println(Arrays.toString(quickSort.sort(arr, arrSize / 2, arr.length - 1)));
+        System.out.println(Arrays.toString(quickSort.sort(arr, 0, arr.length - 1)));
 //        System.out.println(Arrays.toString(mergeSort.sort(arr)));
     }
 
